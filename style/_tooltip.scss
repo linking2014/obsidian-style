@@ -1,0 +1,14 @@
+.tooltip {
+  transform: translateX(-50%) !important;
+  // animation: none !important;
+}
+
+.tooltip.mod-right {
+  transform: translateY(-50%) !important;
+  // animation: none !important;
+}
+
+.tooltip.mod-left {
+  transform: translateY(-50%) !important;
+  // animation: none !important;
+}

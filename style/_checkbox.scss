@@ -1,0 +1,21 @@
+body {
+  // --checkbox-size: 1em !important;
+  --checkbox-size: 13px !important;
+}
+
+input[type=checkbox] {
+  margin: 0 !important;
+}
+
+.markdown-source-view {
+  &.mod-cm6 .task-list-item-checkbox {
+    vertical-align: -2px !important;
+  }
+}
+
+.markdown-preview-view {
+  .task-list-item-checkbox {
+    top: 2px !important;
+    margin-right: 6px !important;
+  }
+}

@@ -1,0 +1,10 @@
+body {
+  --code-background: var(--custom-color-grey-light)
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-rendered code {
+  color: inherit;
+  border-radius: var(--custom-radius);
+  padding: 3px 4px;
+}

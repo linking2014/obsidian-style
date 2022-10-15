@@ -1,0 +1,23 @@
+body {
+  --tab-radius-active: var(--custom-radius);
+  --tab-curve: 3px;
+}
+
+// .workspace-tab-header-container-inner {
+//   margin: 1px 1px 0 1px;
+//   padding: 5px !important;
+
+//   .workspace-tab-header {
+//     // margin: 5px 0;
+//     padding: 0 5px !important;
+  
+//     &::before, &::after {
+//       display: none;
+//     }
+//     &.is-active {
+//       // --tab-background-active: transparent;
+//       box-shadow: 0 0px 2px rgba($color: #000000, $alpha: 0.3);
+//     }
+//   }
+
+// }

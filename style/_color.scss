@@ -1,0 +1,37 @@
+body {
+  --custom-color-grey: #d8dee4;
+  --grey: var(--custom-color-grey) !important;
+
+  --custom-color-grey-light: rgb(239, 241, 243);
+
+  --custom-color-blue: #005CC5;
+  --blue: var(--custom-color-blue) !important;
+  
+  --custom-color-green: #008000;
+  --green: var(--custom-color-green);
+
+  --custom-color-orange: #E36209;
+  --orange: var(--custom-color-orange) !important;
+
+  --interactive-accent: var(--blue) !important;
+
+  --strong-color: inherit !important;
+
+  // --text-faint: var(--grey) !important;
+
+  // --frame-background: var(--grey);
+
+  // --background-secondary: rgb(99, 166, 233) !important;
+  // --titlebar-background-focused: rgb(246, 248, 250) !important;
+
+  // --titlebar-background: var(--background-secondary-alt);
+  // --titlebar-background-focused: var(--background-secondary-alt) !important;
+
+  --titlebar-background-focused: #f6f7f8;
+
+  // --background-secondary-alt: #f6f8fa !important;
+  // --background-secondary: #f6f8fa !important;
+
+  // 框线颜色
+  // --background-modifier-border: rgb(225, 228, 232);
+}

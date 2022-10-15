@@ -1,0 +1,7 @@
+body {
+  --list-marker-color: var(--orange) !important;
+}
+
+ol > li::marker, ul > li::marker, .cm-s-obsidian .cm-formatting-list {
+  font-weight: bold;
+}

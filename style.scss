@@ -1,0 +1,21 @@
+@import './style/color';
+@import './style/code';
+@import './style/checkbox';
+@import './style/heading';
+@import './style/tooltip';
+@import './style/hightlight';
+@import './style/hr';
+@import './style/list';
+@import './style/quote';
+@import './style/tab';
+@import './style/tag';
+@import './style/plugin/calendar';
+@import './style/theme/minimal';
+
+body {
+  --line-height-normal: 1.7 !important;
+  --line-height: 1.7 !important;
+
+  --custom-radius: 3px;
+  line-height: var(--line-height);
+}
