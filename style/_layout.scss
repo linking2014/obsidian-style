@@ -1,0 +1,20 @@
+// 左右拖拽线距离顶部高度
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  top: var(--header-height);
+  height: calc(var(--divider-vertical-height) - var(--header-height));
+}
+
+// 隐藏 tab stack 按钮
+.workspace-tab-header-tab-list {
+  display: none !important;
+}
+
+// 右侧栏顶部按钮右对齐
+.mod-right-split .workspace-tabs {
+  .workspace-tab-header-container {
+    justify-content: flex-end !important;
+  }
+  .workspace-tab-header-spacer {
+    flex-grow: 0 !important;
+  }
+}

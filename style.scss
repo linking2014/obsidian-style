@@ -5,6 +5,7 @@
 @import './style/tooltip';
 @import './style/hightlight';
 @import './style/hr';
+@import './style/layout';
 @import './style/list';
 @import './style/quote';
 @import './style/tab';
@@ -16,7 +17,6 @@
 body {
   --line-height-normal: 1.7 !important;
   --line-height: 1.7 !important;
-
   --custom-radius: 3px;
   line-height: var(--line-height);
 }

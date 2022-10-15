@@ -109,6 +109,22 @@ hr {
   border-top-width: 1px !important;
 }
 
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  top: var(--header-height);
+  height: calc(var(--divider-vertical-height) - var(--header-height));
+}
+
+.workspace-tab-header-tab-list {
+  display: none !important;
+}
+
+.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  justify-content: flex-end !important;
+}
+.mod-right-split .workspace-tabs .workspace-tab-header-spacer {
+  flex-grow: 0 !important;
+}
+
 body {
   --list-marker-color: var(--orange) !important;
 }
