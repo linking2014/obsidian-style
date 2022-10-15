@@ -109,9 +109,19 @@ hr {
   border-top-width: 1px !important;
 }
 
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  top: var(--header-height);
-  height: calc(var(--divider-vertical-height) - var(--header-height));
+.mod-root .workspace-tab-header-container-inner {
+  padding: 1px 15px 0 1px;
+  margin-left: 0;
+}
+
+.mod-left-split > .workspace-leaf-resize-handle {
+  right: -1px;
+}
+
+.mod-left-split .workspace-leaf-resize-handle,
+.mod-right-split .workspace-leaf-resize-handle {
+  top: calc(var(--header-height) - 1px) !important;
+  height: calc(var(--divider-vertical-height) - var(--header-height) + 1px) !important;
 }
 
 .workspace-tab-header-tab-list {
@@ -161,7 +171,7 @@ body:not(.default-font-color) .markdown-preview-view blockquote, body:not(.defau
 
 body {
   --tab-radius-active: var(--custom-radius);
-  --tab-curve: 3px;
+  --tab-curve: 2px;
 }
 
 /* Tags */

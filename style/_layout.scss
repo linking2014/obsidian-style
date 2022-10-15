@@ -1,7 +1,21 @@
+// body {
+//   --divider-color: red;
+// }
+
+.mod-root .workspace-tab-header-container-inner {
+  padding: 1px 15px 0 1px;
+  margin-left: 0;
+}
+
+.mod-left-split > .workspace-leaf-resize-handle {
+  right: -1px;
+}
+
 // 左右拖拽线距离顶部高度
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  top: var(--header-height);
-  height: calc(var(--divider-vertical-height) - var(--header-height));
+.mod-left-split .workspace-leaf-resize-handle,
+.mod-right-split .workspace-leaf-resize-handle {
+  top: calc(var(--header-height) - 1px) !important;
+  height: calc(var(--divider-vertical-height) - var(--header-height) + 1px) !important;
 }
 
 // 隐藏 tab stack 按钮
