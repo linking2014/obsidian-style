@@ -1,0 +1,67 @@
+body {
+  --input-height: 32px;
+}
+
+.workspace-leaf-content {
+  .nav-header {
+    margin-bottom: 0px;
+    padding: 12px;
+
+    .nav-buttons-container {
+      // background-color: var(--background-modifier-hover);
+      background-color: rgba(255, 255, 255, 0.7);
+      border: solid 1px var(--background-modifier-hover);
+      border-radius: var(--input-radius);
+  
+      .nav-action-button {
+        // flex-grow: 1;
+        min-width: 32px;
+        margin: 3px 4px;
+        height: 22px;
+
+        &:hover {
+          background-color: var(--blue-accent-light) !important;
+          // background-color: transparent !important;
+          color: var(--blue-accent);
+        }
+
+        &.is-active {
+          // background-color: var(--blue-accent-light) !important;
+          background-color: transparent;
+          color: var(--blue-accent);
+        }
+
+        &+.nav-action-button {
+          margin-left: -1px;
+        }
+
+        svg.svg-icon {
+          // width: 15px;
+          height: 14px;
+        }
+      }
+    }
+
+    // 搜索
+    & ~ .search-input-container {
+      width: auto;
+      margin: 0 12px;
+    }
+  }
+
+  // 文件
+  .nav-files-container {
+    margin-top: -2px;
+    padding-top: 2px;
+    & > .nav-folder {
+      & > .nav-folder-title {
+        display: none;
+      }
+    }
+  }
+
+  // 标签
+  .tag-container {
+    padding-top: 0;
+  }
+}

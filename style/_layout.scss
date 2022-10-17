@@ -1,21 +1,46 @@
-// body {
-//   --divider-color: red;
-// }
+body {
+  // --divider-color: red;
+  --divider-color: var(--background-modifier-hover);
+  // --divider-color: transparent;
+  // --divider-color: #ddd;
+}
 
 .mod-root .workspace-tab-header-container-inner {
   padding: 1px 15px 0 1px;
   margin-left: 0;
 }
 
-.mod-left-split > .workspace-leaf-resize-handle {
-  right: -1px;
-}
+// .mod-left-split > .workspace-leaf-resize-handle {
+//   right: -1px !important;
+// }
 
 // 左右拖拽线距离顶部高度
-.mod-left-split .workspace-leaf-resize-handle,
-.mod-right-split .workspace-leaf-resize-handle {
+body:not(.hider-tabs) .mod-left-split .workspace-leaf-resize-handle,
+body:not(.hider-tabs) .mod-right-split .workspace-leaf-resize-handle {
   top: calc(var(--header-height) - 1px) !important;
   height: calc(var(--divider-vertical-height) - var(--header-height) + 1px) !important;
+}
+
+// 隐藏 tab 后的 inline tab
+body.hider-tabs .view-header {
+  -webkit-app-region: drag;
+  margin: 0;
+  padding: 0 var(--size-4-3);
+  flex-shrink: 0;
+  border-bottom: solid 1px var(--divider-color);
+}
+
+.view-header {
+  .view-header-breadcrumb-separator {
+    color: hsl(214deg 14% 85%);
+  }
+  .view-header-breadcrumb,
+  .clickable-icon {
+    &:hover {
+      background-color: var(--blue-accent-light) !important;
+      color: var(--blue-accent);
+    }
+  }
 }
 
 // 隐藏 tab stack 按钮
@@ -24,8 +49,9 @@
 }
 
 // 右侧栏顶部按钮右对齐
-.mod-right-split .workspace-tabs {
+body.hider-sidebar-buttons .mod-right-split .workspace-tabs {
   .workspace-tab-header-container {
+    padding-right: 0 !important;
     justify-content: flex-end !important;
   }
   .workspace-tab-header-spacer {

@@ -1,6 +1,7 @@
 /* Scroll bars */
 body:not(.hider-scrollbars).styled-scrollbars,
-body:not(.native-scrollbars) {
+body:not(.native-scrollbars),
+body {
 
   ::-webkit-scrollbar {
     width:11px;

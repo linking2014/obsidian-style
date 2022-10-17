@@ -17,10 +17,21 @@ body {
   margin-top: -1em;
 }
 
-body:not(.default-font-color) .markdown-preview-view blockquote, body:not(.default-font-color) span.cm-quote.cm-quote-1 {
+body:not(.default-font-color) .markdown-preview-view blockquote,
+body:not(.default-font-color) span.cm-quote.cm-quote-1 {
   font-style: var(--blockquote-style);
 }
 
 .cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet {
   margin: 16px 0 !important;
+}
+
+.markdown-source-view .HyperMD-quote:before {
+  left: 2px !important;
+  // top: 4px !important;
+  // bottom: 4px !important;
+  // margin-left: -18px;
+  // width: 2px !important;
+  // border: none !important;
+  // background-color: var(--blockquote-border-color);
 }
