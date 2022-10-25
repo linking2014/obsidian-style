@@ -2,17 +2,21 @@ body {
   --list-marker-color: var(--orange) !important;
 }
 
-ol > li::marker, ul > li::marker, .cm-s-obsidian .cm-formatting-list {
-  font-weight: bold;
-}
-
-// checkbox 缩进
-li .contains-task-list .task-list-item {
-  margin-left: -20px !important;
-}
-
-// checkbox 缩进
-div > ul.contains-task-list > .task-list-item > .task-list-item-checkbox,
-div > ul.contains-task-list > .task-list-item > p > .task-list-item-checkbox {
-  margin-left: -20px !important;
+.workspace-split.mod-vertical.mod-root {
+  .workspace-leaf-content[data-mode="source"] {
+    ol > li::marker, ul > li::marker, .cm-s-obsidian .cm-formatting-list {
+      font-weight: bold;
+    }
+    
+    // checkbox 缩进
+    li .contains-task-list .task-list-item {
+      margin-left: -20px !important;
+    }
+    
+    // checkbox 缩进
+    div > ul.contains-task-list > .task-list-item > .task-list-item-checkbox,
+    div > ul.contains-task-list > .task-list-item > p > .task-list-item-checkbox {
+      margin-left: -20px !important;
+    }
+  }
 }

@@ -1,0 +1,26 @@
+// 白色 tab 背景
+
+.workspace-split.mod-vertical.mod-root {
+  .workspace-tab-header-container {
+    background-color: #fff;
+
+    .workspace-tab-header-container-inner .workspace-tab-header.is-active .workspace-tab-header-inner {
+      // background-color: var(--tab-outline-color);
+      background-color: var(--tab-container-background);
+    }
+  }
+}
+
+body:not(.hider-tabs) .mod-left-split > .workspace-leaf-resize-handle,
+body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
+  top: 0 !important;
+  height: calc(var(--divider-vertical-height)) !important;
+}
+
+.mod-root .sidebar-toggle-button.mod-right {
+  background-color: #fff !important;
+}
+
+.mod-right-split .sidebar-toggle-button.mod-right {
+  background-color: var(--tab-container-background) !important;
+}

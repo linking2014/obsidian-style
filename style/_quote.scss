@@ -15,6 +15,10 @@ body {
 
 .callout-content {
   margin-top: -1em;
+
+  ul {
+    margin: 16px 0;
+  }
 }
 
 body:not(.default-font-color) .markdown-preview-view blockquote,

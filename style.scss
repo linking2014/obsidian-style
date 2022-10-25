@@ -1,6 +1,7 @@
 @import './style/color';
 @import './style/code';
 @import './style/checkbox';
+@import './style/editor';
 @import './style/heading';
 @import './style/tooltip';
 @import './style/hightlight';
@@ -9,13 +10,15 @@
 @import './style/layout';
 @import './style/list';
 @import './style/quote';
-@import './style/tab';
 @import './style/tag';
 @import './style/scrollbar';
 @import './style/sidebar';
 @import './style/statusbar';
 @import './style/plugin/calendar';
 @import './style/theme/minimal';
+@import './style/tab';
+@import './style/tabLight';
+@import './style/component/search';
 
 body {
   --line-height-normal: 1.7 !important;

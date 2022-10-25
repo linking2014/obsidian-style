@@ -5,32 +5,31 @@ body {
   // --divider-color: #ddd;
 }
 
-.mod-root .workspace-tab-header-container-inner {
-  padding: 1px 15px 0 1px;
-  margin-left: 0;
-}
-
-// .mod-left-split > .workspace-leaf-resize-handle {
-//   right: -1px !important;
-// }
-
-// 左右拖拽线距离顶部高度
-body:not(.hider-tabs) .mod-left-split .workspace-leaf-resize-handle,
-body:not(.hider-tabs) .mod-right-split .workspace-leaf-resize-handle {
+// 左右拖拽线距离顶部高度，tab分隔线
+body:not(.hider-tabs) .mod-left-split > .workspace-leaf-resize-handle,
+body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
   top: calc(var(--header-height) - 1px) !important;
   height: calc(var(--divider-vertical-height) - var(--header-height) + 1px) !important;
 }
 
-// 隐藏 tab 后的 inline tab
-body.hider-tabs .view-header {
+// inline tab
+.view-header {
   -webkit-app-region: drag;
   margin: 0;
   padding: 0 var(--size-4-3);
   flex-shrink: 0;
-  border-bottom: solid 1px var(--divider-color);
-}
 
-.view-header {
+  // 切换 tab 图标
+  .cmdr-page-header[aria-label="Toggle right sidebar"] svg {
+    transform: rotate(180deg);
+  }
+
+  // 切换右侧 sidebar 图标
+  .cmdr-page-header[aria-label="Hider: Toggle tab bar"] svg {
+    transform: rotate(90deg);
+  }
+
+  // 面包屑
   .view-header-breadcrumb-separator {
     color: hsl(214deg 14% 85%);
   }
@@ -41,6 +40,10 @@ body.hider-tabs .view-header {
       color: var(--blue-accent);
     }
   }
+}
+// 隐藏 tab 后的 inline tab
+body.hider-tabs .view-header {
+  border-bottom: solid 1px var(--divider-color);
 }
 
 // 隐藏 tab stack 按钮
