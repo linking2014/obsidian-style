@@ -152,8 +152,17 @@ body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
   padding: 0 var(--size-4-3);
   flex-shrink: 0;
 }
+.view-header .cmdr-page-header[aria-label="Toggle left sidebar"] {
+  order: -10;
+}
+.view-header .cmdr-page-header[aria-label="Toggle right sidebar"] {
+  order: -8;
+}
 .view-header .cmdr-page-header[aria-label="Toggle right sidebar"] svg {
   transform: rotate(180deg);
+}
+.view-header .cmdr-page-header[aria-label="Hider: Toggle tab bar"] {
+  order: -9;
 }
 .view-header .cmdr-page-header[aria-label="Hider: Toggle tab bar"] svg {
   transform: rotate(90deg);

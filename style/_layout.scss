@@ -19,14 +19,27 @@ body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
   padding: 0 var(--size-4-3);
   flex-shrink: 0;
 
-  // 切换 tab 图标
-  .cmdr-page-header[aria-label="Toggle right sidebar"] svg {
-    transform: rotate(180deg);
+  // 排序
+
+  // 切换左侧 sidebar 图标
+  .cmdr-page-header[aria-label="Toggle left sidebar"] {
+    order: -10;
   }
 
   // 切换右侧 sidebar 图标
-  .cmdr-page-header[aria-label="Hider: Toggle tab bar"] svg {
-    transform: rotate(90deg);
+  .cmdr-page-header[aria-label="Toggle right sidebar"] {
+    order: -8;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  // 切换 tab 图标
+  .cmdr-page-header[aria-label="Hider: Toggle tab bar"] {
+    order: -9;
+    svg {
+      transform: rotate(90deg);
+    }
   }
 
   // 面包屑
