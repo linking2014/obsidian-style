@@ -65,6 +65,7 @@ input[type=checkbox] {
 }
 
 body {
+  --file-margins: var(--size-4-8) 60px;
   --h1-size: 1.5em !important;
   --h2-size: 1.25em !important;
   --h3-size: 1em !important;
@@ -74,18 +75,77 @@ body {
   --h3-color: var(--text-normal);
 }
 
-.HyperMD-header::before {
+.markdown-reading-view .heading-collapse-indicator {
+  margin-left: -20px;
+}
+.markdown-reading-view h1, .markdown-reading-view h2, .markdown-reading-view h3, .markdown-reading-view h4, .markdown-reading-view h5, .markdown-reading-view h6 {
+  position: relative;
+}
+.markdown-reading-view h1::before, .markdown-reading-view h2::before, .markdown-reading-view h3::before, .markdown-reading-view h4::before, .markdown-reading-view h5::before, .markdown-reading-view h6::before {
   position: absolute;
-  left: -1.4em;
+  right: 100%;
   z-index: 1;
   display: flex;
   align-items: center;
+  margin-right: 18px;
   color: var(--custom-color-grey);
   transform: scale(0.75);
+  transform-origin: 100% center;
   pointer-events: none;
 }
-.HyperMD-header:hover::before {
-  opacity: 0;
+.markdown-reading-view h1::before {
+  content: "h1";
+}
+.markdown-reading-view h2::before {
+  content: "h2";
+}
+.markdown-reading-view h3::before {
+  content: "h3";
+}
+.markdown-reading-view h4::before {
+  content: "h4";
+}
+.markdown-reading-view h5::before {
+  content: "h5";
+}
+.markdown-reading-view h6::before {
+  content: "h6";
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  padding-right: 15px;
+}
+
+.HyperMD-header::before {
+  position: absolute;
+  right: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+  color: var(--custom-color-grey);
+  transform: scale(0.75);
+  transform-origin: 100% center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.HyperMD-header.HyperMD-header-1:before {
+  content: "h1" !important;
+}
+.HyperMD-header.HyperMD-header-2::before {
+  content: "h2" !important;
+}
+.HyperMD-header.HyperMD-header-3:before {
+  content: "h3" !important;
+}
+.HyperMD-header.HyperMD-header-4:before {
+  content: "h4";
+}
+.HyperMD-header.HyperMD-header-5:before {
+  content: "h5";
+}
+.HyperMD-header.HyperMD-header-6:before {
+  content: "h6";
 }
 
 h2, .HyperMD-header.HyperMD-header-2.cm-line {

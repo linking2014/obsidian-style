@@ -1,6 +1,8 @@
 // 标题
 
 body {
+  --file-margins: var(--size-4-8) 60px;
+
   --h1-size: 1.5em !important;
   --h2-size: 1.25em !important;
   --h3-size: 1em !important;
@@ -10,49 +12,96 @@ body {
   --h3-color: var(--text-normal);
 }
 
+// 阅读视图
+.markdown-reading-view {
+  .heading-collapse-indicator {
+    margin-left: -20px;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    position: relative;
+    &::before {
+      position: absolute;
+      right: 100%;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      margin-right: 18px;
+      color: var(--custom-color-grey);
+      transform: scale(0.75);
+      transform-origin: 100% center;
+      pointer-events: none;
+    }
+  }
+  h1::before {
+    content: 'h1';
+  }
+  h2::before {
+    content: 'h2';
+  }
+  h3::before {
+    content: 'h3';
+  }
+  h4::before {
+    content: 'h4';
+  }
+  h5::before {
+    content: 'h5';
+  }
+  h6::before {
+    content: 'h6';
+  }
+}
+
+// 编辑视图
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  padding-right: 15px;
+}
+
 .HyperMD-header {
   &::before {
     position: absolute;
-    left: -1.4em;
+    right: 100%;
     z-index: 1;
     display: flex;
     align-items: center;
-    // zoom: 0.75;
+    margin-right: 18px;
     color: var(--custom-color-grey);
     transform: scale(0.75);
+    transform-origin: 100% center;
     pointer-events: none;
     // transition: opacity 200ms;
+    white-space: nowrap;
   }
 
   &:hover {
     &::before {
-      opacity: 0;
+      // opacity: 0;
     }
   }
 
-  // &.HyperMD-header-1:before {
-  //   content: "h1" !important;
-  // }
+  &.HyperMD-header-1:before {
+    content: "h1" !important;
+  }
   
-  // &.HyperMD-header-2::before {
-  //   content: "h2" !important;
-  // }
+  &.HyperMD-header-2::before {
+    content: "h2" !important;
+  }
   
-  // &.HyperMD-header-3:before {
-  //   content: "h3" !important;
-  // }
+  &.HyperMD-header-3:before {
+    content: "h3" !important;
+  }
   
-  // &.HyperMD-header-4:before {
-  //   content: "h4";
-  // }
+  &.HyperMD-header-4:before {
+    content: "h4";
+  }
   
-  // &.HyperMD-header-5:before {
-  //   content: "h5";
-  // }
+  &.HyperMD-header-5:before {
+    content: "h5";
+  }
   
-  // &.HyperMD-header-6:before {
-  //   content: "h6";
-  // }
+  &.HyperMD-header-6:before {
+    content: "h6";
+  }
 }
 
 h2, .HyperMD-header.HyperMD-header-2.cm-line {

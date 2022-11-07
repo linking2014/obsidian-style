@@ -19,6 +19,11 @@ body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
   padding: 0 var(--size-4-3);
   flex-shrink: 0;
 
+  // 隐藏中间部分
+  // .view-header-title-container {
+
+  // }
+
   // 排序
 
   // 切换左侧 sidebar 图标
