@@ -5,7 +5,12 @@ body {
 .workspace-split.mod-vertical.mod-root {
   .workspace-leaf-content[data-mode="source"] {
     ol > li::marker, ul > li::marker, .cm-s-obsidian .cm-formatting-list {
-      font-weight: bold;
+      color: inherit;
+
+      .list-bullet {
+        font-weight: bold;
+        color: var(--list-marker-color);
+      }
     }
     
     // checkbox 缩进

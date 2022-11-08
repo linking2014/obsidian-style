@@ -257,7 +257,11 @@ body {
 }
 
 .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ol > li::marker, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ul > li::marker, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] .cm-s-obsidian .cm-formatting-list {
+  color: inherit;
+}
+.workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ol > li::marker .list-bullet, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ul > li::marker .list-bullet, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] .cm-s-obsidian .cm-formatting-list .list-bullet {
   font-weight: bold;
+  color: var(--list-marker-color);
 }
 .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] li .contains-task-list .task-list-item {
   margin-left: -20px !important;
