@@ -113,7 +113,7 @@ body {
 }
 
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-  padding-right: 15px;
+  padding-right: 15px !important;
 }
 
 .HyperMD-header::before {
