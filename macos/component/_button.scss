@@ -1,0 +1,7 @@
+button.mod-cta {
+  background-color: var(--interactive-accent-hover);
+
+  &:hover {
+    background-color: var(--interactive-accent);
+  }
+}

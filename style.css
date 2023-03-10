@@ -75,6 +75,11 @@ body {
   --h3-color: var(--text-normal);
 }
 
+.inline-title {
+  margin-bottom: 1.2em;
+  padding-bottom: 0;
+}
+
 .markdown-reading-view .heading-collapse-indicator {
   margin-left: -20px;
 }
@@ -212,6 +217,18 @@ body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
   padding: 0 var(--size-4-3);
   flex-shrink: 0;
 }
+.view-header .view-action.cmdr-adder[aria-label="Add new command"] {
+  order: -2000;
+}
+.view-header .cmdr-page-header[aria-label="Workspaces Plus: Load: reading"] {
+  order: -1002;
+}
+.view-header .cmdr-page-header[aria-label="Daily notes: Open today's daily note"] {
+  order: -101;
+}
+.view-header .cmdr-page-header[aria-label="Starred: Star/unstar current file"] {
+  order: -100;
+}
 .view-header .cmdr-page-header[aria-label="Toggle left sidebar"] {
   order: -10;
 }
@@ -228,7 +245,7 @@ body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
   transform: rotate(90deg);
 }
 .view-header .view-header-breadcrumb-separator {
-  color: hsl(214deg, 14%, 85%);
+  color: hsl(214, 14%, 85%);
 }
 .view-header .view-header-breadcrumb:hover,
 .view-header .clickable-icon:hover {
@@ -253,14 +270,11 @@ body.hider-sidebar-buttons .mod-right-split .workspace-tabs .workspace-tab-heade
 }
 
 body {
+  --list-bullet-size: 4px;
   --list-marker-color: var(--orange) !important;
 }
 
 .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ol > li::marker, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ul > li::marker, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] .cm-s-obsidian .cm-formatting-list {
-  color: inherit;
-}
-.workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ol > li::marker .list-bullet, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] ul > li::marker .list-bullet, .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] .cm-s-obsidian .cm-formatting-list .list-bullet {
-  font-weight: bold;
   color: var(--list-marker-color);
 }
 .workspace-split.mod-vertical.mod-root .workspace-leaf-content[data-mode=source] li .contains-task-list .task-list-item {

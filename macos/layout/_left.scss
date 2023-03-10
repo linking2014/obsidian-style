@@ -1,0 +1,24 @@
+// 左侧
+.mod-left-split {
+  &>.workspace-leaf-resize-handle {
+    // 分割线
+    border: none !important;
+    // width: 1px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      // right: 0;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      z-index: 10;
+      width: 1px;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .workspace-tab-header-container {
+    // border-bottom-color: transparent;
+  }
+}

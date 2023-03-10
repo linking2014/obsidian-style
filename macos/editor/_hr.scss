@@ -1,0 +1,8 @@
+body {
+  --hr-color: var(--custom-color-grey);
+  --hr-thickness: 1px !important;
+}
+
+hr {
+  border-top-width: 1px !important;
+}

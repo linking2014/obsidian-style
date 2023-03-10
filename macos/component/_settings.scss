@@ -1,0 +1,41 @@
+// .mod-settings {
+
+// }
+
+.horizontal-tab-nav-item, .vertical-tab-nav-item {
+  line-height: 20px;
+  font-size: 13px;
+  &.is-active {
+    &:hover {
+      background-color: var(--interactive-accent-hover);
+    }
+  }
+  
+}
+
+.modal.mod-settings .vertical-tab-header {
+  // display: flex;
+  // flex-direction: column;
+  // position: relative;
+  padding: 10px;
+  // border-right: none;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   // right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 100%;
+  //   z-index: 10;
+  //   width: 1px;
+  //   box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  // }
+
+  .vertical-tab-header-group {
+    // padding: 0;
+    & + .vertical-tab-header-group {
+      // margin-top: var(--size-4-3);
+    }
+  }
+}

@@ -1,16 +1,37 @@
+@import './left';
+@import './center';
+@import './right';
+
 body {
-  // --divider-color: red;
-  --divider-color: var(--background-modifier-hover);
-  // --divider-color: transparent;
-  // --divider-color: #ddd;
+  --line-height-normal: 1.7 !important;
+  --line-height: 1.7 !important;
+  line-height: var(--line-height);
+}
+
+.mod-left-split .workspace-tab-header, 
+.mod-right-split .workspace-tab-header {
+
+  // &:hover .workspace-tab-header-inner {
+  //   background-color: var(--blue-accent-light) !important;
+
+  //   .workspace-tab-header-inner-icon {
+  //     color: var(--blue-accent);
+  //   }
+  // }
+
+  &.is-active {
+    // background-color: transparent !important;
+    background-color: rgba($color: #000000, $alpha: 0.055);
+  }
+
 }
 
 // 左右拖拽线距离顶部高度，tab分隔线
-body:not(.hider-tabs) .mod-left-split > .workspace-leaf-resize-handle,
-body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
-  top: calc(var(--header-height) - 1px) !important;
-  height: calc(var(--divider-vertical-height) - var(--header-height) + 1px) !important;
-}
+// body:not(.hider-tabs) .mod-left-split > .workspace-leaf-resize-handle,
+// body:not(.hider-tabs) .mod-right-split > .workspace-leaf-resize-handle {
+//   top: calc(var(--header-height) - 1px) !important;
+//   height: calc(var(--divider-vertical-height) - var(--header-height) + 1px) !important;
+// }
 
 // inline tab
 .view-header {

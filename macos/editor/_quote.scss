@@ -1,0 +1,41 @@
+body {
+  --blockquote-border-thickness: 2px;
+  --blockquote-color: var(--custom-color-green);
+  --blockquote-style: normal;
+  --blockquote-border-color: var(--custom-color-green);
+  // --callout-padding: 12px 16px;
+  --callout-padding: 0 16px;
+  --embed-block-shadow-hover: 0 0 0 0px var(--background-modifier-border),
+	inset 0 0 0 1px var(--background-modifier-border);
+}
+
+.callout-title {
+  padding: 12px 0;
+}
+
+.callout-content {
+  margin-top: -1em;
+
+  ul {
+    margin: 16px 0;
+  }
+}
+
+body:not(.default-font-color) .markdown-preview-view blockquote,
+body:not(.default-font-color) span.cm-quote.cm-quote-1 {
+  font-style: var(--blockquote-style);
+}
+
+.cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet {
+  margin: 16px 0 !important;
+}
+
+.markdown-source-view .HyperMD-quote:before {
+  left: 2px !important;
+  // top: 4px !important;
+  // bottom: 4px !important;
+  // margin-left: -18px;
+  // width: 2px !important;
+  // border: none !important;
+  // background-color: var(--blockquote-border-color);
+}

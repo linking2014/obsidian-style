@@ -1,0 +1,73 @@
+body {
+
+  --custom-color-grey: #d8dee4;
+  --grey: var(--custom-color-grey) !important;
+
+  --custom-color-grey-light: rgb(239, 241, 243);
+
+  --custom-color-blue: #005CC5;
+  --blue: var(--custom-color-blue) !important;
+  --blue-accent: #007dff !important;
+  --blue-accent-light: hsl(211deg 100% 94%);
+
+  --color-accent: var(--custom-color-blue) !important;
+
+  --color-accent-2: #007dff !important;
+  
+  --custom-color-green: #008000;
+  --green: var(--custom-color-green);
+
+  --custom-color-orange: #E36209;
+  --orange: var(--custom-color-orange) !important;
+
+  --macos-blue: #2891fb;
+
+  // --interactive-accent: var(--blue) !important;
+  --interactive-accent: var(--macos-blue) !important;
+
+  --icon-color-hover: #3c3c3c;
+  --icon-color: #4e4e4e;
+  --text-muted: #434343;
+  // --icon-color-focused: var(--blue-accent);
+  --icon-color-focused: var(--text-muted);
+  --titlebar-text-color-focused: var(--blue-accent);
+
+  --strong-color: inherit !important;
+  --em-color: #8250df;
+
+  // --background-modifier-hover: #d9d9d9 !important;
+  --background-modifier-hover: rgba(0,0,0,0.135) !important;
+
+  --divider-color: rgba(0,0,0,0.135) !important;
+  // --divider-color: var(--background-modifier-hover) !important;
+
+
+  --custom-color-purple: #8250df;
+  --color-purple: var(--custom-color-purple);
+  --italic-color: var(--custom-color-purple);
+  --text-selection: var(--blue-accent-light);
+
+  // --text-faint: var(--grey) !important;
+
+  // --frame-background: var(--grey);
+
+  // --background-secondary: #fff !important;
+  // --titlebar-background-focused: rgb(246, 248, 250) !important;
+
+  // --titlebar-background: var(--background-secondary-alt);
+  // --titlebar-background-focused: var(--background-secondary-alt) !important;
+
+  // tab 背景色
+  // --titlebar-background-focused: #fff;
+  // --titlebar-background-focused: #f6f8fa;
+  // --titlebar-background-focused: var(--background-modifier-hover);
+  // --titlebar-background: var(--background-modifier-hover);
+
+  // --background-secondary-alt: #f6f8fa !important;
+  // --background-secondary: #f6f8fa !important;
+
+  // 框线颜色
+  // --background-modifier-border: rgb(225, 228, 232);
+  // --background-modifier-hover: #d8dee4 !important;
+  
+}

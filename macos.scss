@@ -1,0 +1,44 @@
+@import './macos/color';
+@import './macos/layout/layout';
+// @import './macos/component/scrollbar';
+@import './macos/component/tab';
+@import './macos/component/sidebar';
+@import './macos/component/settings';
+@import './macos/component/button';
+
+@import './macos/editor/checkbox';
+@import './macos/editor/code';
+@import './macos/editor/editor';
+@import './macos/editor/heading';
+@import './macos/editor/hightlight';
+@import './macos/editor/hr';
+@import './macos/editor/img';
+@import './macos/editor/list';
+@import './macos/editor/quote';
+@import './macos/editor/tag';
+@import './macos/editor/embed';
+
+@import './macos/plugin/make';
+@import './macos/plugin/calendar';
+
+
+body {
+  // --background-secondary: rgba(225, 225, 224, 0.95);
+  --background-secondary: rgba(234,234,234, 0.95);
+  // --background-secondary: #eaeaea;
+  --background-modifier-border: rgba(0,0,0,0.085);
+  --background-modifier-border-hover: rgba(0,0,0,0.15);
+  --divider-width-hover: 2px;
+  --custom-radius: 3px;
+}
+
+body {
+  &.is-focused {
+
+  }
+}
+
+.is-translucent:not(.is-fullscreen) .titlebar, .is-translucent:not(.is-fullscreen) .app-container {
+  background-color: rgba(225, 225, 224, 0.75);
+}
+
