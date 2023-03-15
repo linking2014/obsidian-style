@@ -5,29 +5,34 @@ body {
   --checklist-done-decoration: none;
   --checkbox-radius: 4px;
   // --checkbox-color-hover: var(--background-modifier-hover);
-  --checkbox-color-hover: var(--divider-color)
+  --checkbox-color-hover: var(--divider-color);
+  --checklist-done-color: #999;
 }
 
 input[type=checkbox] {
   margin: 0 !important;
   margin-right: 2px !important;
   border: none;
-  box-shadow: inset 0 0 0px 1.2px var(--text-normal);
+  box-shadow: inset 0 0 0px 1.2px #444;
+  // box-shadow: inset 0 0 0px 1.2px var(--text-normal);
 
   &:checked {
     background-color: transparent;
+    box-shadow: inset 0 0 0px 1.2px var(--checklist-done-color);
     &:after {
       top: 0;
       left: 0;
+      // background-color: var(--checklist-done-color);
       background-color: var(--text-normal);
       -webkit-mask-position: 50% 50%;
+      -webkit-mask-size: 60%;
     }
   }
 }
 
 body .task-list-item-checkbox {
   top: 0px !important;
-  vertical-align: -2px !important;
+  vertical-align: -1px !important;
 }
 
 .markdown-preview-view {
