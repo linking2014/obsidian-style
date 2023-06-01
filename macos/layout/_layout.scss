@@ -8,7 +8,7 @@ body {
   line-height: var(--line-height);
 }
 
-.mod-left-split .workspace-tab-header, 
+.mod-left-split .workspace-tab-header,
 .mod-right-split .workspace-tab-header {
 
   // &:hover .workspace-tab-header-inner {
@@ -55,7 +55,7 @@ body {
   .cmdr-page-header[aria-label="Workspaces Plus: Load: reading"] {
     order: -1002;
   }
-  
+
   .cmdr-page-header[aria-label="Daily notes: Open today's daily note"] {
     order: -101;
   }
@@ -71,6 +71,7 @@ body {
   // 切换右侧 sidebar 图标
   .cmdr-page-header[aria-label="Toggle right sidebar"] {
     order: -8;
+
     svg {
       transform: rotate(180deg);
     }
@@ -79,6 +80,7 @@ body {
   // 切换 tab 图标
   .cmdr-page-header[aria-label="Hider: Toggle tab bar"] {
     order: -9;
+
     svg {
       transform: rotate(90deg);
     }
@@ -88,6 +90,7 @@ body {
   .view-header-breadcrumb-separator {
     color: hsl(214deg 14% 85%);
   }
+
   .view-header-breadcrumb,
   .clickable-icon {
     &:hover {
@@ -96,6 +99,7 @@ body {
     }
   }
 }
+
 // 隐藏 tab 后的 inline tab
 body.hider-tabs .view-header {
   border-bottom: solid 1px var(--divider-color);
@@ -112,6 +116,7 @@ body.hider-sidebar-buttons .mod-right-split .workspace-tabs {
     padding-right: 0 !important;
     justify-content: flex-end !important;
   }
+
   .workspace-tab-header-spacer {
     flex-grow: 0 !important;
   }

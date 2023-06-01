@@ -1,5 +1,15 @@
-// 修复 列表下 切换行的时候 折叠按钮 会抖动的问题
-.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-  padding-right: 18px;
-  right: -10px;
+.markdown-source-view.mod-cm6 .cm-line {
+
+  &.HyperMD-task-line {
+    .cm-fold-indicator .collapse-indicator {
+      padding-right: 4px;
+      right: 3px;
+    }
+  }
+
+  // 修复 列表下 切换行的时候 折叠按钮 会抖动的问题
+  .cm-fold-indicator .collapse-indicator {
+    padding-right: 15px;
+    right: -10px;
+  }
 }

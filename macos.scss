@@ -1,10 +1,12 @@
 @import './macos/color';
+@import './macos/component/icon';
 @import './macos/layout/layout';
 // @import './macos/component/scrollbar';
 @import './macos/component/tab';
 @import './macos/component/sidebar';
 @import './macos/component/settings';
 @import './macos/component/button';
+@import './macos/component/table';
 @import './macos/component/menu';
 
 @import './macos/editor/checkbox';
@@ -25,21 +27,19 @@
 
 body {
   // --background-secondary: rgba(225, 225, 224, 0.95);
-  --background-secondary: rgba(234,234,234, 0.95);
+  --background-secondary: rgba(234, 234, 234, 0.95);
   // --background-secondary: #eaeaea;
-  --background-modifier-border: rgba(0,0,0,0.085);
-  --background-modifier-border-hover: rgba(0,0,0,0.15);
+  --background-modifier-border: rgba(0, 0, 0, 0.085);
+  --background-modifier-border-hover: rgba(0, 0, 0, 0.15);
   --divider-width-hover: 2px;
   --custom-radius: 3px;
 }
 
 body {
-  &.is-focused {
-
-  }
+  &.is-focused {}
 }
 
-.is-translucent:not(.is-fullscreen) .titlebar, .is-translucent:not(.is-fullscreen) .app-container {
+.is-translucent:not(.is-fullscreen) .titlebar,
+.is-translucent:not(.is-fullscreen) .app-container {
   background-color: rgba(225, 225, 224, 0.75);
 }
-

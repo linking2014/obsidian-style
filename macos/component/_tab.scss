@@ -1,5 +1,5 @@
 body {
-  --background-modifier-hover: rgba(0,0,0,0.075) !important;
+  --background-modifier-hover: rgba(0, 0, 0, 0.075) !important;
   --tab-radius-active: var(--custom-radius);
   // --tab-radius-active: 0;
   --tab-curve: 2px;
@@ -7,6 +7,7 @@ body {
   // --tab-text-color-focused: #666 !important;
 
   .workspace-split {
+
     &.mod-left-split .workspace-tabs.mod-top,
     &.mod-right-split .workspace-tabs.mod-top {
       --tab-container-background: var(--titlebar-background);
@@ -17,8 +18,11 @@ body {
     }
   }
 
-  &.is-focused {
-    
+  &.is-focused {}
+
+  // 隐藏tab时，
+  &.hider-tabs.show-view-header .workspace:not(.is-left-sidedock-open) .view-header {
+    padding-left: calc(var(--frame-left-space) + var(--ribbon-width));
   }
 }
 
@@ -57,6 +61,11 @@ body {
           // height: auto;
           // top: 5px;
           // bottom: 5px;
+        }
+
+        svg.svg-icon {
+          width: 14px;
+          height: 14px;
         }
       }
 
