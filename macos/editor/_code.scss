@@ -1,5 +1,80 @@
 body {
-  --code-background: var(--custom-color-grey-light)
+  --code-background: #f6f7f9;
+  --code-inline-background: rgb(239, 241, 243);
+
+  --code-red: #d73a49;
+  // --code-red: #DD1144;
+  --code-blue: #005cc5;
+  // --code-blue: #2222DD;
+  --code-green: #22863a;
+  // --code-green: #008800;
+  --code-purple: #6f42c1;
+  --code-orange: #E36209;
+  --code-black: #24292e;
+
+  --code-normal: #24292e;
+  // --code-comment: var(--text-faint);
+  // --code-function: #6f42c1;
+  // --code-important: var(--color-orange);
+  // --code-keyword: #d73a49;
+  // --code-operator: var(--color-red);
+  // --code-property: #005cc5;
+  // --code-property: #24292e;
+  --code-punctuation: var(--text-muted);
+  // --code-string: #032f62;
+  // --code-tag: #22863a;
+  // --code-value: #6f42c1;
+}
+
+// 黑色
+.cm-operator,
+.cm-bracket.cm-bracket {
+  color: var(--code-black);
+}
+
+// 橙色
+.cm-number,
+.cm-string {
+  color: var(--code-red);
+}
+
+// 红色
+.cm-operator {
+  // color: var(--code-red);
+}
+
+// 紫色
+.cm-property {
+  // text-decoration: underline;
+  color: var(--code-blue);
+  color: var(--code-purple);
+  // color: var(--code-red);
+  // color: var(--code-orange);
+}
+
+.cm-def {
+  color: var(--code-green);
+  font-weight: bold;
+}
+
+// 绿色
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.cm-attribute {
+  color: var(--code-green);
+}
+
+// .cm-callee.cm-callee {
+//   color: var(--code-green);
+//   text-decoration: underline;
+// }
+
+// 蓝色
+.cm-callee.cm-callee,
+.cm-tag,
+.cm-keyword {
+  color: var(--code-blue);
 }
 
 .cm-s-obsidian span.cm-inline-code,
@@ -7,6 +82,10 @@ body {
   color: inherit;
   border-radius: var(--custom-radius);
   padding: 3px 4px;
+  background-color: var(--code-inline-background);
 }
+
+// code block
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {}
 
 // todo

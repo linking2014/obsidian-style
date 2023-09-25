@@ -12,4 +12,16 @@
     padding-right: 15px;
     right: -10px;
   }
+
+  // 链接下划线
+  .cm-hmd-internal-link {
+    text-underline-offset: 4px;
+
+    .cm-underline {
+      text-underline-offset: 4px;
+      // text-decoration-color: rgba(#005CC5, 0.7);
+      // --link-decoration-thickness: 2px;
+    }
+  }
+
 }

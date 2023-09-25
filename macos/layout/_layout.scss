@@ -3,8 +3,8 @@
 @import './right';
 
 body {
-  --line-height-normal: 1.7 !important;
-  --line-height: 1.7 !important;
+  --line-height-normal: 1.78 !important;
+  --line-height: 1.78 !important;
   line-height: var(--line-height);
 }
 
@@ -50,6 +50,10 @@ body {
   // 切换左侧 sidebar 图标
   .view-action.cmdr-adder[aria-label="Add new command"] {
     order: -2000;
+  }
+
+  .cmdr-page-header[aria-label="文件列表: 在文件列表中显示当前文件"] {
+    order: -1003;
   }
 
   .cmdr-page-header[aria-label="Workspaces Plus: Load: reading"] {

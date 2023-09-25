@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   --custom-color-grey: #d8dee4;
   --grey: var(--custom-color-grey) !important;
@@ -71,8 +72,8 @@ body {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 }
 body {
-  --line-height-normal: 1.7 !important;
-  --line-height: 1.7 !important;
+  --line-height-normal: 1.78 !important;
+  --line-height: 1.78 !important;
   line-height: var(--line-height);
 }
 
@@ -89,6 +90,9 @@ body {
 }
 .view-header .view-action.cmdr-adder[aria-label="Add new command"] {
   order: -2000;
+}
+.view-header .cmdr-page-header[aria-label="文件列表: 在文件列表中显示当前文件"] {
+  order: -1003;
 }
 .view-header .cmdr-page-header[aria-label="Workspaces Plus: Load: reading"] {
   order: -1002;
@@ -145,6 +149,17 @@ body {
   --tab-curve: 2px;
   --background-secondary-alt: #fefefe !important;
 }
+body .workspace-tab-header-new-tab {
+  margin-right: 1px;
+  padding: 5px 0;
+}
+body .workspace-tab-header-new-tab .clickable-icon {
+  padding: 4px 5px;
+  height: 100%;
+}
+body .workspace-tab-header-new-tab .clickable-icon .svg-icon {
+  height: 16px;
+}
 body .workspace-split.mod-left-split .workspace-tabs.mod-top, body .workspace-split.mod-right-split .workspace-tabs.mod-top {
   --tab-container-background: var(--titlebar-background);
 }
@@ -156,7 +171,7 @@ body.hider-tabs.show-view-header .workspace:not(.is-left-sidedock-open) .view-he
 }
 
 .workspace-split.mod-root .workspace-tab-header-container-inner {
-  margin: 1px 0 0 0;
+  margin: 0;
   padding: 4px !important;
 }
 .workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header {
@@ -171,7 +186,7 @@ body.hider-tabs.show-view-header .workspace:not(.is-left-sidedock-open) .view-he
   display: none;
 }
 .workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header .workspace-tab-header-inner {
-  padding: 0 4px 0 10px;
+  padding: 0 6px 0 10px;
 }
 .workspace-split.mod-root .workspace-tab-header-container-inner .workspace-tab-header .workspace-tab-header-inner::after {
   display: none;
@@ -205,6 +220,10 @@ body {
   margin-bottom: 0px;
   padding: 10px;
 }
+.workspace-leaf-content .nav-header + .nav-files-container {
+  margin-top: -10px;
+  padding-top: 10px;
+}
 .workspace-leaf-content .nav-header .nav-buttons-container {
   background-color: rgba(255, 255, 255, 0.5);
   border: solid 1px var(--divider-color);
@@ -232,6 +251,9 @@ body {
 .workspace-leaf-content .nav-header ~ .search-input-container {
   width: auto;
   margin: 0 12px;
+}
+.workspace-leaf-content[data-type] .tree-item-flair-outer {
+  flex-shrink: 0;
 }
 .workspace-leaf-content[data-type] .view-content {
   padding: 10px;
@@ -354,10 +376,8 @@ button.mod-cta:hover {
 }
 
 .markdown-rendered table {
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .menu {
@@ -430,7 +450,49 @@ body .task-list-item-checkbox {
 }
 
 body {
-  --code-background: var(--custom-color-grey-light) ;
+  --code-background: #f6f7f9;
+  --code-inline-background: rgb(239, 241, 243);
+  --code-red: #d73a49;
+  --code-blue: #005cc5;
+  --code-green: #22863a;
+  --code-purple: #6f42c1;
+  --code-orange: #E36209;
+  --code-black: #24292e;
+  --code-normal: #24292e;
+  --code-punctuation: var(--text-muted);
+}
+
+.cm-operator,
+.cm-bracket.cm-bracket {
+  color: var(--code-black);
+}
+
+.cm-number,
+.cm-string {
+  color: var(--code-red);
+}
+
+.cm-property {
+  color: var(--code-blue);
+  color: var(--code-purple);
+}
+
+.cm-def {
+  color: var(--code-green);
+  font-weight: bold;
+}
+
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.cm-attribute {
+  color: var(--code-green);
+}
+
+.cm-callee.cm-callee,
+.cm-tag,
+.cm-keyword {
+  color: var(--code-blue);
 }
 
 .cm-s-obsidian span.cm-inline-code,
@@ -438,6 +500,7 @@ body {
   color: inherit;
   border-radius: var(--custom-radius);
   padding: 3px 4px;
+  background-color: var(--code-inline-background);
 }
 
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line .cm-fold-indicator .collapse-indicator {
@@ -447,6 +510,12 @@ body {
 .markdown-source-view.mod-cm6 .cm-line .cm-fold-indicator .collapse-indicator {
   padding-right: 15px;
   right: -10px;
+}
+.markdown-source-view.mod-cm6 .cm-line .cm-hmd-internal-link {
+  text-underline-offset: 4px;
+}
+.markdown-source-view.mod-cm6 .cm-line .cm-hmd-internal-link .cm-underline {
+  text-underline-offset: 4px;
 }
 
 body {
@@ -468,10 +537,20 @@ body {
 .markdown-reading-view .heading-collapse-indicator {
   margin-left: -20px;
 }
-.markdown-reading-view h1, .markdown-reading-view h2, .markdown-reading-view h3, .markdown-reading-view h4, .markdown-reading-view h5, .markdown-reading-view h6 {
+.markdown-reading-view h1,
+.markdown-reading-view h2,
+.markdown-reading-view h3,
+.markdown-reading-view h4,
+.markdown-reading-view h5,
+.markdown-reading-view h6 {
   position: relative;
 }
-.markdown-reading-view h1::before, .markdown-reading-view h2::before, .markdown-reading-view h3::before, .markdown-reading-view h4::before, .markdown-reading-view h5::before, .markdown-reading-view h6::before {
+.markdown-reading-view h1::before,
+.markdown-reading-view h2::before,
+.markdown-reading-view h3::before,
+.markdown-reading-view h4::before,
+.markdown-reading-view h5::before,
+.markdown-reading-view h6::before {
   position: absolute;
   right: 100%;
   z-index: 1;
@@ -534,18 +613,17 @@ body {
   content: "h6";
 }
 
-h2, .HyperMD-header.HyperMD-header-2.cm-line {
+h2,
+.HyperMD-header.HyperMD-header-2.cm-line {
   border-bottom: none !important;
 }
 
-h2,
-.markdown-rendered h2,
-.HyperMD-header-2,
-.HyperMD-list-line .cm-header-2 {
-  color: var(--blue) !important;
-}
-
-.mod-cm6 .cm-editor .HyperMD-header-1, .mod-cm6 .cm-editor .HyperMD-header-2, .mod-cm6 .cm-editor .HyperMD-header-3, .mod-cm6 .cm-editor .HyperMD-header-4, .mod-cm6 .cm-editor .HyperMD-header-5, .mod-cm6 .cm-editor .HyperMD-header-6 {
+.mod-cm6 .cm-editor .HyperMD-header-1,
+.mod-cm6 .cm-editor .HyperMD-header-2,
+.mod-cm6 .cm-editor .HyperMD-header-3,
+.mod-cm6 .cm-editor .HyperMD-header-4,
+.mod-cm6 .cm-editor .HyperMD-header-5,
+.mod-cm6 .cm-editor .HyperMD-header-6 {
   padding: 0.2em 0;
 }
 

@@ -1,2 +1,6 @@
 # obsidian-style
-my obsidian style snippets
+a macOS obsidian style snippets
+
+## screenshot
+
+![screenshot](./_screenshot/screenshot.png)
