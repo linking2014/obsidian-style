@@ -1,4 +1,9 @@
-// .mod-root {
-//   position: relative;
-//   z-index: 10;
-// }
+.mod-root {
+  // position: relative;
+  // z-index: 10;
+
+  .workspace-tab-header-container {
+    padding-left: 0 !important;
+  }
+}
+

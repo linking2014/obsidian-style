@@ -14,235 +14,239 @@ body {
   --nav-item-background-selected: hsla(var(--interactive-accent-hsl), 0.1);
 }
 
-.workspace-leaf-content {
-  .nav-header {
-    margin-bottom: 0px;
-    padding: 10px;
+.mod-sidedock {
 
-    &+.nav-files-container {
-      margin-top: -10px;
-      padding-top: 10px;
-    }
-
-    .nav-buttons-container {
-      background-color: rgba(255, 255, 255, 0.5);
-      border: solid 1px var(--divider-color);
-      border-radius: var(--input-radius);
-
-      .nav-action-button {
-        // flex-grow: 1;
-        min-width: 32px;
-        margin: 3px 4px;
-        height: 22px;
-
-        &:hover {
-          background-color: var(--blue-accent-light) !important;
-          // background-color: transparent !important;
-          color: var(--blue-accent);
-        }
-
-        &.is-active {
-          // background-color: var(--blue-accent-light) !important;
-          background-color: transparent;
-          color: var(--blue-accent);
-        }
-
-        &+.nav-action-button {
-          margin-left: -1px;
-        }
-
-        svg.svg-icon {
-          // width: 15px;
-          height: 14px;
-        }
-      }
-    }
-
-    // 搜索
-    &~.search-input-container {
-      width: auto;
-      margin: 0 12px;
-    }
-  }
-
-  &[data-type] {
-
-    // 提到当前文件名右侧数字
-    .tree-item-flair-outer {
-      flex-shrink: 0;
-    }
-
-    // 基本布局
-    .view-content {
+  .workspace-leaf-content {
+    .nav-header {
+      margin-bottom: 0px;
       padding: 10px;
-
-      .recent-files-file-delete {
-        svg.svg-icon {
-          margin-top: 1px;
-          width: 14px;
-          height: 14px;
-        }
+  
+      &+.nav-files-container {
+        margin-top: -10px;
+        padding-top: 10px;
       }
-    }
-
-    // 竖线
-    .tree-item-children {
-      margin-left: 16px !important;
-    }
-
-    // 拖拽 指示器
-    .drop-indicator {
-      border-radius: 10px;
-      width: auto;
-      left: 10px !important;
-      right: 10px !important;
-    }
-
-    // 文件管理
-    &[data-type="file-explorer"] {
-      .tree-item-self {
-        &[data-path="/"] {
-          display: none;
-
-          &+.tree-item-children {
-            margin-left: 0 !important;
+  
+      .nav-buttons-container {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: solid 1px var(--divider-color);
+        border-radius: var(--input-radius);
+  
+        .nav-action-button {
+          // flex-grow: 1;
+          min-width: 32px;
+          margin: 3px 4px;
+          height: 22px;
+  
+          &:hover {
+            background-color: var(--blue-accent-light) !important;
+            // background-color: transparent !important;
+            color: var(--blue-accent);
+          }
+  
+          &.is-active {
+            // background-color: var(--blue-accent-light) !important;
+            background-color: transparent;
+            color: var(--blue-accent);
+          }
+  
+          &+.nav-action-button {
+            margin-left: -1px;
+          }
+  
+          svg.svg-icon {
+            // width: 15px;
+            height: 14px;
           }
         }
-
-        &::before {
-          background-image: var(--iconFileTextBlue);
+      }
+  
+      // 搜索
+      &~.search-input-container {
+        width: auto;
+        margin: 0 12px;
+      }
+    }
+  
+    &[data-type] {
+  
+      // 提到当前文件名右侧数字
+      .tree-item-flair-outer {
+        flex-shrink: 0;
+      }
+  
+      // 基本布局
+      .view-content {
+        padding: 10px;
+  
+        .recent-files-file-delete {
+          svg.svg-icon {
+            margin-top: 1px;
+            width: 14px;
+            height: 14px;
+          }
         }
-
+      }
+  
+      // 竖线
+      .tree-item-children {
+        margin-left: 16px !important;
+      }
+  
+      // 拖拽 指示器
+      .drop-indicator {
+        border-radius: 10px;
+        width: auto;
+        left: 10px !important;
+        right: 10px !important;
+      }
+  
+      // 文件管理
+      &[data-type="file-explorer"] {
+        .tree-item-self {
+          &[data-path="/"] {
+            display: none;
+  
+            &+.tree-item-children {
+              margin-left: 0 !important;
+            }
+          }
+  
+          &::before {
+            background-image: var(--iconFileTextBlue);
+          }
+  
+          // 文件夹
+          &.nav-folder-title {
+            &::before {
+              background-image: var(--iconFolderBlue);
+            }
+          }
+        }
+      }
+  
+      &[data-type="bookmarks"],
+      &[data-type="backlink"] {
+  
+        // 顶部
+        .nav-header {
+          margin-bottom: -10px;
+        }
+      }
+  
+      // data-type="backlink"
+      &[data-type="backlink"],
+      &[data-type="outgoing-link"] {
+        .view-content {
+          padding: 0;
+        }
+  
+        .search-input-container {
+          margin-top: 10px;
+        }
+  
+        &[data-type="outgoing-link"] {
+          .search-result-file-matches {
+            margin: 7px 0 0 !important;
+          }
+        }
+  
+        // 搜索结果
+        .search-result-container {
+          padding: 2px 0 10px;
+  
+          .search-results-children {
+            .search-result+.search-result:not(.is-collapsed) {
+              margin-top: 10px;
+            }
+          }
+  
+          .search-result-file-matches {
+            margin: 10px 0 0;
+          }
+        }
+  
+        .tree-item-self::before {
+          margin-left: 0;
+        }
+  
+        .backlink-pane,
+        .outgoing-link-pane {
+          &>.tree-item-self.is-clickable {
+            &::before {
+              background-image: var(--iconFolderDark);
+            }
+          }
+        }
+      }
+  
+      // data-type="outline"
+      &[data-type="outline"] {
+        .outline {
+          padding: 0;
+        }
+  
+        .tree-item-self::before {
+          background-image: var(--iconDotGrey) !important;
+          background-size: 4px;
+        }
+      }
+  
+      .tree-item-self {
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center !important;
+        line-height: 18px !important;
+  
+        // 文件
+        &::before {
+          content: '';
+          background-image: var(--iconFileTextDark);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          margin-left: -15px;
+          margin-right: 7px;
+          width: 14px;
+          height: 1em;
+          flex-shrink: 0;
+        }
+  
         // 文件夹
         &.mod-collapsible {
-          &::before {
-            background-image: var(--iconFolderBlue);
-          }
-        }
-      }
-    }
-
-    &[data-type="bookmarks"],
-    &[data-type="backlink"] {
-
-      // 顶部
-      .nav-header {
-        margin-bottom: -10px;
-      }
-    }
-
-    // data-type="backlink"
-    &[data-type="backlink"],
-    &[data-type="outgoing-link"] {
-      .view-content {
-        padding: 0;
-      }
-
-      .search-input-container {
-        margin-top: 10px;
-      }
-
-      &[data-type="outgoing-link"] {
-        .search-result-file-matches {
-          margin: 7px 0 0 !important;
-        }
-      }
-
-      // 搜索结果
-      .search-result-container {
-        padding: 2px 0 10px;
-
-        .search-results-children {
-          .search-result+.search-result:not(.is-collapsed) {
-            margin-top: 10px;
-          }
-        }
-
-        .search-result-file-matches {
-          margin: 10px 0 0;
-        }
-      }
-
-      .tree-item-self::before {
-        margin-left: 0;
-      }
-
-      .backlink-pane,
-      .outgoing-link-pane {
-        &>.tree-item-self.is-clickable {
           &::before {
             background-image: var(--iconFolderDark);
           }
         }
-      }
-    }
-
-    // data-type="outline"
-    &[data-type="outline"] {
-      .outline {
-        padding: 0;
-      }
-
-      .tree-item-self::before {
-        background-image: var(--iconDotGrey) !important;
-        background-size: 4px;
-      }
-    }
-
-    .tree-item-self {
-      margin-bottom: 2px;
-      display: flex;
-      align-items: center !important;
-      line-height: 18px !important;
-
-      // 文件
-      &::before {
-        content: '';
-        background-image: var(--iconFileTextDark);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        margin-left: -15px;
-        margin-right: 7px;
-        width: 14px;
-        height: 1em;
-        flex-shrink: 0;
-      }
-
-      // 文件夹
-      &.mod-collapsible {
-        &::before {
-          background-image: var(--iconFolderDark);
-        }
-      }
-
-      // 文件、文件夹 拖拽样式
-      &.is-being-dragged {
-        background-color: var(--color-orange);
-        // background-color: rgba(255, 208, 0, 0.75);
-
-        &::before {
-          background-image: var(--iconFileTextLight) !important;
-        }
-
-        &.mod-collapsible {
+  
+        // 文件、文件夹 拖拽样式
+        &.is-being-dragged {
+          background-color: var(--color-orange);
+          // background-color: rgba(255, 208, 0, 0.75);
+  
           &::before {
-            background-image: var(--iconFolderLight) !important;
+            background-image: var(--iconFileTextLight) !important;
           }
+  
+          &.mod-collapsible {
+            &::before {
+              background-image: var(--iconFolderLight) !important;
+            }
+          }
+  
         }
-
+  
+        // 隐藏原版图标
+        .tree-item-icon {
+          display: none;
+        }
+  
       }
-
-      // 隐藏原版图标
-      .tree-item-icon {
-        display: none;
-      }
-
+    }
+  
+    // 标签
+    .tag-container {
+      padding-top: 0;
     }
   }
 
-  // 标签
-  .tag-container {
-    padding-top: 0;
-  }
 }

@@ -9,8 +9,8 @@
 
   // 修复 列表下 切换行的时候 折叠按钮 会抖动的问题
   .cm-fold-indicator .collapse-indicator {
-    padding-right: 15px;
-    right: -10px;
+    padding-right: 15px !important;
+    right: -10px !important;
   }
 
   // 链接下划线

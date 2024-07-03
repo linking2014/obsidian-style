@@ -117,7 +117,8 @@ body.hider-tabs .view-header {
 // 右侧栏顶部按钮右对齐
 body.hider-sidebar-buttons .mod-right-split .workspace-tabs {
   .workspace-tab-header-container {
-    padding-right: 0 !important;
+    // padding-right: 0 !important;
+    padding-right: 6px !important;
     justify-content: flex-end !important;
   }
 
