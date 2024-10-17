@@ -1,5 +1,5 @@
 // 左侧
-.mod-left-split {
+.mod-left-split.mod-sidedock {
   &>.workspace-leaf-resize-handle {
     // 分割线
     border: none !important;
@@ -19,6 +19,9 @@
   }
 
   .workspace-tab-header-container {
-    // border-bottom-color: transparent;
+    // padding-left: var(--frame-left-space) !important;
+    // padding-left: 90px !important;
+    // --frame-left-space: calc(80px - var(--ribbon-width)) !important;
+    --frame-left-space: 72px !important;
   }
 }

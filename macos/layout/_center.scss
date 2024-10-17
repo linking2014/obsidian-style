@@ -1,9 +1,23 @@
-.mod-root {
-  // position: relative;
-  // z-index: 10;
+.workspace {
 
-  .workspace-tab-header-container {
-    padding-left: 0 !important;
+  &.is-left-sidedock-open {
+    .mod-root.mod-vertical {
+      // position: relative;
+      // z-index: 10;
+    
+      .workspace-tab-header-container {
+        padding-left: 0 !important;
+      }
+    }
   }
+  
+  // .mod-root.mod-vertical {
+  //   // position: relative;
+  //   // z-index: 10;
+  
+  //   .workspace-tab-header-container {
+  //     padding-left: 0 !important;
+  //   }
+  // }
 }
 
